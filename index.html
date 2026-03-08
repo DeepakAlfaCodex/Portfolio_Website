@@ -216,6 +216,35 @@
         animation: blink 1.2s infinite;
       }
 
+      .profile-img {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        z-index: 10;
+        filter: blur(5px);
+        transition: all 0.5s;
+        animation: move 4s ease-in infinite;
+        
+      }
+
+      .profile-img:hover {
+        box-shadow: 0 0 40px #00d1ff;
+        cursor: pointer;
+        filter: blur(0);
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
       @keyframes blink {
         0%,
         50% {
@@ -306,9 +335,9 @@
           </div>
           <div class="col-lg-5 text-center mt-5 mt-lg-0">
             <img
-              src="./assets/Deepak.jpeg"
+              src="./assets/rolls-royce.jpeg"
               alt="Deepak"
-              class="profile-img shadow-lg"
+              class="profile-img"
             />
           </div>
         </div>
